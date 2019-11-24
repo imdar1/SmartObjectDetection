@@ -82,12 +82,14 @@
 (defrule isSegiEnamBeraturan
   (objek segienamTidakBeraturan)
   (jumlahSisiSama 6)
+  (jumlahSudutSama 6)
   =>
   (assert (objek segiEnamBeraturan)))
 
 (defrule isSegiLimaBeraturan
   (objek segilimaTidakBeraturan)
   (jumlahSisiSama 5)
+  (jumlahSudutSama 5)
   =>
   (assert (objek segiLimaBeraturan)))
 
