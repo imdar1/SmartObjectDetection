@@ -18,7 +18,6 @@ topFrame = Frame(root)
 topFrame.pack(side=TOP)
 sourceImage = ImageLayout(topFrame, side=LEFT, text="Source Image", headerInImage="Please Open an Image", textInImage="Click -> Open Image Button")
 detectionImage = ImageLayout(topFrame, side=LEFT, text="Detection Image")
-buttons = FuncButtons(topFrame, side=LEFT, sourceImage=sourceImage)
 
 ## BOTTOM FRAME ##
 bottomFrame = Frame(root)
@@ -26,5 +25,7 @@ bottomFrame.pack(side=BOTTOM)
 textBoxDetectionResult = TextBoxLayout(bottomFrame, side=LEFT, text="Detection Result")
 textMatchedFacts = TextBoxLayout(bottomFrame, side=LEFT, text="Matched Facts")
 textHitRules = TextBoxLayout(bottomFrame, side=LEFT, text="Hit Rules")
+
+buttons = FuncButtons(topFrame, side=LEFT, sourceImage=sourceImage, detectionImage=detectionImage, textBoxDetectionResult=textBoxDetectionResult, textMatchedFacts=textMatchedFacts, textHitRules=textHitRules)
 
 root.mainloop()

@@ -14,7 +14,7 @@
   (jumlahSisiSama 2)
   (sudutTumpul 2)
   (sudutLancip 2)
-  (sudutSiku 0)
+  (sudutSikuSiku 0)
   (jumlahPasanganSejajar 2)
   =>
   (assert (objek jajaranGenjang)))
@@ -81,13 +81,13 @@
 
 (defrule isSegiEnamBeraturan
   (objek segienamTidakBeraturan)
-  (jumlahSisiSama 6)
+  (enamSisiSama true)
   =>
   (assert (objek segiEnamBeraturan)))
 
 (defrule isSegiLimaBeraturan
   (objek segilimaTidakBeraturan)
-  (jumlahSisiSama 5)
+  (limaSisiSama true)
   =>
   (assert (objek segiLimaBeraturan)))
 
