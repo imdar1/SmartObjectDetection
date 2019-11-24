@@ -1,5 +1,5 @@
-## Tugas Besar 2 IF3170
-# SmartObjectDetection
+# Tugas Besar 2 IF3170
+## SmartObjectDetection
 An app that can recognize various shapes built with python and clipspy
 
 Tugas Besar II pada kuliah IF3170 bertujuan agar peserta kuliah mengimplementasikan Knowledge Based
