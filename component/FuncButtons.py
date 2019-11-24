@@ -159,9 +159,14 @@ class FuncButtons:
         # print(str(object_result))
         # print(facts)
         # Write to text box
+        self.textHitRules.clearTextBox()
         for hit_rule in hit_rules:
             self.textHitRules.insertTextLine(hit_rule)
+        
+        self.textBoxDetectionResult.clearTextBox()
         self.textBoxDetectionResult.insertTextLine(object_result)
+
+        self.textMatchedFacts.clearTextBox()
         for fact in facts:
             self.textMatchedFacts.insertTextLine(fact)
 
@@ -170,7 +175,7 @@ class FuncButtons:
         webbrowser.open("rules.clp")
 
     def showRulesHandler(self, event):
-        print('Show Rules')
+        self.textHitRules.showTextBox();
 
     def showFactsHandler(self, event):
-        print('Show Facts')
+        self.textMatchedFacts.showTextBox();

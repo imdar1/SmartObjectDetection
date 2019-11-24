@@ -23,8 +23,8 @@ detectionImage = ImageLayout(topFrame, side=LEFT, text="Detection Image")
 bottomFrame = Frame(root)
 bottomFrame.pack(side=BOTTOM)
 textBoxDetectionResult = TextBoxLayout(bottomFrame, side=LEFT, text="Detection Result")
-textMatchedFacts = TextBoxLayout(bottomFrame, side=LEFT, text="Matched Facts")
-textHitRules = TextBoxLayout(bottomFrame, side=LEFT, text="Hit Rules")
+textMatchedFacts = TextBoxLayout(bottomFrame, side=LEFT, text="Matched Facts", hidden=True)
+textHitRules = TextBoxLayout(bottomFrame, side=LEFT, text="Hit Rules", hidden=True)
 
 buttons = FuncButtons(topFrame, side=LEFT, sourceImage=sourceImage, detectionImage=detectionImage, textBoxDetectionResult=textBoxDetectionResult, textMatchedFacts=textMatchedFacts, textHitRules=textHitRules)
 

@@ -2,16 +2,16 @@ from tkinter import *
 
 class TextBoxLayout:
     def __init__(self, master, side=None, text="", hidden=False):
-        frame = Frame(master)
+        self.frame = Frame(master)
         if side:
-            frame.pack(side=side)
+            self.frame.pack(side=side)
         else:
-            frame.pack()
+            self.frame.pack()
 
-        self.scrollbar = Scrollbar(frame)
-        self.textBox = Text(frame, height=20, width=30)
+        self.scrollbar = Scrollbar(self.frame)
+        self.textBox = Text(self.frame, height=20, width=30)
 
-        self.labelTextBox = Label(frame, text=text)
+        self.labelTextBox = Label(self.frame, text=text)
         self.labelTextBox.pack()
 
         self.textBox.config(yscrollcommand=self.scrollbar.set, state=DISABLED)
@@ -28,8 +28,13 @@ class TextBoxLayout:
     def insertTextLine(self, text):
         text = text + "\n" 
         self.textBox.config(state=NORMAL)
+        self.textBox.delete("1.0", END)
         self.textBox.insert(END, text)
         self.textBox.config(state=DISABLED)
+    
+    def clearTextBox(self):
+        self.textBox.delete("1.0", END)
+        self.textBox.update()
 
     def showTextBox(self):
         self.labelTextBox.pack()
